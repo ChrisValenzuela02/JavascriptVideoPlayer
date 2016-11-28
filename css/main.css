@@ -1,0 +1,175 @@
+/* CSS Document */
+
+video::-webkit-media-controls-enclosure {
+  display:none !important;
+}
+
+video::-webkit-media-controls {
+  display:none !important;
+}
+
+*{
+	font-family: 'Libre Franklin', sans-serif;
+	color: #4E4E4E;
+}
+
+#video-container{
+	width: 50%;
+	height: 100%;
+	margin:0 auto;
+	position:relative;
+}
+
+video{
+	width: 100%;
+}
+
+#buttonbar{
+	width: 99%;
+	position: absolute;
+	bottom: 15px;
+	z-index: 2147483647;
+}
+
+#control-buttons{
+  margin: 0 10px 0 15px;
+}
+
+#mute,
+#fullScreen,
+#captionsBtn,
+#volume{
+  float: right;
+}
+
+#captionsBtn{
+  color: white;
+  font-weight: bold;
+  padding-top: 3px;
+}
+
+#play, #mute, #fullScreen, #captionsBtn{
+  background: url();
+  border: 0;
+  cursor: pointer;
+}
+
+#playBtnImg,
+#muteBtnImg,
+#fullScreenBtnImg{
+  height: 16px;
+  width: 16px;
+}
+
+progress {
+  color: orange;
+  font-size: .6em;
+  line-height: .5em;
+  text-indent: .5em;
+  background: lightgrey;
+}
+
+progress::-moz-progress-bar { background: orange; }
+progress::-webkit-progress-bar { background: lightgrey; }
+progress::-webkit-progress-value { background: orange; }
+
+#progress-bar,
+#seekbar{
+	height: 5px;
+	width: 99%;
+}
+
+#seekbar-container{
+	margin-left: 10px;
+	height: 25px;
+}
+
+#seekbar{
+	position: relative;
+	bottom: 17px;
+	z-index: 100;
+	opacity: 0.1;
+}
+
+#currentTimeText,
+#durationTimeText{
+  color: white;
+  padding: 2px 5px 0 5px;
+}
+
+#volume{
+  width: 65px;
+  padding: 0;
+	margin: 6px 0 0 0;
+}
+
+#transcript{
+	width: 50%;
+	margin:auto;
+}
+
+p{
+	text-align: justify;
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+
+.transcript-section{
+	margin: 20px 0;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[id="seekbar"]{
+	height: 6px;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+}
+
+input[id="seekbar"]::-webkit-slider-thumb{
+	height: 6px;
+	width: 6px;
+	margin: 0;
+}
+
+input[id="volume"]{
+  border-radius: 10%;
+  background: lightgrey;
+  height: 6px;
+  cursor: pointer;
+}
+
+input[id="volume"]::-moz-range-thumb{
+  background: #FFF;
+  height: 10px;
+	width: 10px;
+	border-radius: 100%;
+}
+
+input[id="volume"]::-webkit-slider-thumb{
+  background: #FFF;
+  height: 10px;
+	width: 10px;
+	border-radius: 100%;
+}
+
+.currentText{
+  color: orange;
+}
