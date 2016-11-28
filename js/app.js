@@ -29,8 +29,8 @@ function initializeVideoPlayer(){
 	seekbar.addEventListener("change", seek, false);
 	volumeBar.addEventListener("change", setVolume, false);
 	video.addEventListener("click", play, false);
-  video.addEventListener("timeupdate", seekTimeUpdate, false);
-  video.addEventListener("timeupdate", updateTimeBar, false);
+ 	video.addEventListener("timeupdate", seekTimeUpdate, false);
+ 	video.addEventListener("timeupdate", updateTimeBar, false);
 	video.addEventListener("dblclick", toggleFullScreen, false);
 	video.addEventListener("mouseover", showControlsHover, false);
 	video.addEventListener("mouseout", hideControlsHover, false);
@@ -44,7 +44,7 @@ window.onload = initializeVideoPlayer;
 // Displays controls when video is playing and mouse hovers over.
 function showControlsHover(){
   if (!video.paused && isFullScreenEnabled === false){
-    buttonControls.style.display = 'block';
+    buttonControls.style.display = "block";
     buttonBar.style.bottom = "13px";
     progressBar.style.opacity = "1";
   }
@@ -53,7 +53,7 @@ function showControlsHover(){
 // Hides controls when mouse out.
 function hideControlsHover(){
     if (!video.paused && isFullScreenEnabled === false){
-    buttonControls.style.display = 'none';
+    buttonControls.style.display = "none";
     progressBar.style.opacity = "0.5";
   }
 }
@@ -158,7 +158,7 @@ function updateTimeBar(){
 	updateBar.value = percentage;
 	
 var now = video.currentTime;
-for (var i = 0; i < transcriptSpan.length; i++) {
+for(var i = 0; i < transcriptSpan.length; i++) {
 		  if ( now >= parseInt(transcriptSpan[i].dataset.start) && now <= parseInt(transcriptSpan[i].dataset.end) ) {
 		    transcriptSpan[i].className = "currentText";
 		  } else {
@@ -182,7 +182,7 @@ function setVolume(){
 function restartVideo(){
   if(video.ended){
     video.currentTime = 0;
-    buttonControls.style.display = 'block';
+    buttonControls.style.display = "block";
     buttonBar.style.bottom = "15px";
     progressBar.style.opacity = "1";
     document.getElementById("playBtnImg").src = "icons/play-icon.png";
